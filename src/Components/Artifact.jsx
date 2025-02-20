@@ -24,8 +24,8 @@ const Artifact = ({ artifact }) => {
         alt={artifact?.artifactName}
       />
       <div className="p-4">
-        <h2 className="text-lg font-semibold text-gray-800">{artifact?.artifactName}</h2>
-        <p className="text-sm text-gray-600 mt-2">{artifact?.historicalContext}</p>
+        <h2 className="text-lg font-semibold text-gray-800 text-center">{artifact?.artifactName}</h2>
+        <p className="text-sm text-gray-600 mt-2 text-center">{artifact?.historicalContext}</p>
         <div className="flex items-center justify-between mt-4">
           <button
             className="btn btn-outline flex items-center gap-1"

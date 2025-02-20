@@ -46,20 +46,29 @@ const Login = () => {
         console.log(error.message);
       });
   };
-  
 
   return (
     <>
       <Helmet>
+        <link
+          rel="icon"
+          type="image/svg+xml"
+          href="https://i.ibb.co.com/nrgCfMk/images-7.jpg"
+        />
         <title>Login | Artifacts Bazzar</title>
       </Helmet>
-      <div className="py-20 bg-gradient-to-r from-stone-600 to-amber-300 
-       flex justify-center items-center">
+      <div
+        className="py-20 bg-gradient-to-r from-stone-600 to-amber-300 
+       flex justify-center items-center"
+      >
         <div className="bg-opacity-8 w-5/12 mx-auto">
           <Lottie animationData={LoginLottie} loop={true}></Lottie>
         </div>
         <div className="card bg-base-100 w-full max-w-sm mx-auto shrink-0 shadow-2xl z-20">
-          <div className="text-center max-w-60 font-sans font-bold bg-gradient-to-t from-stone-600 to-amber-300  bg-clip-text text-transparent pt-5 mx-auto text-4xl">
+          <div
+            className=" max-w-60 text-center font-serif font-extrabold text-3xl md:text-4xl 
+  bg-gradient-to-r from-amber-600 to-stone-900 bg-clip-text text-transparent py-4 uppercase tracking-wider pt-5 mx-auto "
+          >
             Login Now
           </div>
           <form className="card-body" onSubmit={handleLogin}>
@@ -94,10 +103,16 @@ const Login = () => {
               </label>
             </div>
             <div className="form-control mt-2 gap-5">
-              <button className="btn btn-warning bg-gradient-to-r from-stone-600 to-amber-300 text-white text-lg" type="submit">
+              <button
+                className="btn btn-warning bg-gradient-to-r from-stone-600 to-amber-300 text-white text-lg"
+                type="submit"
+              >
                 Login
               </button>
-              <Link to="/register" className="text-lg btn btn-warning bg-gradient-to-r from-stone-600 to-amber-300  text-white">
+              <Link
+                to="/register"
+                className="text-lg btn btn-warning bg-gradient-to-r from-stone-600 to-amber-300  text-white"
+              >
                 Register Now
               </Link>
             </div>

@@ -1,4 +1,4 @@
-import { Cursor } from "react-simple-typewriter";
+
 import { useContext, useState } from "react";
 import { AuthContext } from "../../Contexts/AuthProvider";
 import { Helmet } from "react-helmet";
@@ -34,10 +34,8 @@ const AddArtifact = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    console.log("Artifact Details:", artifactDetails);
-
     try {
-      const response = await fetch("http://localhost:5000/add-artifact",{
+      const response = await fetch("http://localhost:5000/add-artifact", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -54,9 +52,9 @@ const AddArtifact = () => {
         throw new Error(data.message || "Failed to add artifact!");
       }
     } catch (error) {
-      console.error("This are given",artifactDetails)
+      console.error("This are given", artifactDetails);
       console.error("Error adding artifact:", error);
-      alert(error.message );
+      alert(error.message);
     }
   };
 
@@ -75,9 +73,11 @@ const AddArtifact = () => {
           <div className="hero-content flex-col ">
             <div className="card bg-base-100 w-full shrink-0 shadow-2xl">
               <div className="text-center lg:text-left mx-5 mt-5">
-                <h1 className="text-3xl font-bold text-neutral mx-auto text-center">
+                <h1
+                  className="font-serif font-extrabold text-3xl md:text-4xl 
+  bg-gradient-to-r from-amber-600 to-stone-900 bg-clip-text text-transparent py-4 uppercase tracking-wider mx-auto text-center"
+                >
                   Add Artifact
-                  <Cursor cursorColor="Black" />
                 </h1>
                 <p className="pt-6 text-neutral text-lg font-bold">
                   Fill in the details below to add a new Artifact.

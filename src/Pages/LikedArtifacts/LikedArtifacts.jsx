@@ -38,10 +38,13 @@ const LikedArtifacts = () => {
     <div className="min-h-screen flex items-center justify-center bg-amber-200 p-5">
       <Helmet>
         <title>Liked Artifacts</title>
+        <link rel="icon" type="image/svg+xml" href="https://i.ibb.co.com/nrgCfMk/images-7.jpg" />
       </Helmet>
 
       <div className="w-full max-w-6xl shadow-xl bg-white p-6 rounded-xl">
-        <h2 className="text-3xl font-bold text-center mb-6">Liked Artifacts</h2>
+        <h2 className="text-center font-serif font-extrabold text-3xl md:text-4xl 
+  bg-gradient-to-r from-amber-600 to-stone-900 bg-clip-text text-transparent 
+  py-6 uppercase tracking-wider">Liked Artifacts</h2>
 
         {loading && <p className="text-center text-xl">Loading...</p>}
         {error && <p className="text-center text-red-600 text-xl">{error}</p>}

@@ -27,7 +27,7 @@ const Routes = createBrowserRouter([
           {
             path: "/",
             element: <Artifacts />,
-            loader: () => fetch("http://localhost:5000/artifacts"),
+            loader: () => fetch("http://localhost:7000/artifacts"),
             errorElement: <ErrorF2F></ErrorF2F>,
           },
         ],

@@ -37,6 +37,7 @@ const MyArtifactPage = () => {
     <div className="container mx-auto p-5">
       <Helmet>
         <title>My Artifacts | Artifacts Bazaar</title>
+        <link rel="icon" type="image/svg+xml" href="https://i.ibb.co.com/nrgCfMk/images-7.jpg" />
       </Helmet>
 
       <div className="text-3xl py-4 font-bold">

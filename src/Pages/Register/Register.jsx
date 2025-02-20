@@ -78,6 +78,7 @@ const Register = () => {
     <>
       <Helmet>
         <title>Register | Artifacts Bazzar</title>
+        <link rel="icon" type="image/svg+xml" href="https://i.ibb.co.com/nrgCfMk/images-7.jpg" />
       </Helmet>
       <div>
         <div className="py-20 lg:flex justify-center items-center bg-gradient-to-r from-stone-600 to-amber-300 text-black">

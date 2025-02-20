@@ -45,79 +45,124 @@ const ArtifactPage = () => {
     <div className="min-h-screen flex items-center justify-center bg-amber-200 p-5">
       <div className="card w-full max-w-6xl shadow-xl bg-base-100">
         <div className="card-body">
-          <h2 className="text-3xl font-bold text-center mb-6">Artifact Details</h2>
+          <h2
+            className=" text-center mb-6 font-serif font-extrabold text-3xl md:text-4xl 
+  bg-gradient-to-r from-amber-600 to-stone-900 bg-clip-text text-transparent font-bold 
+ py-3 uppercase tracking-wider"
+          >
+            Artifact Details
+          </h2>
           <div className="flex flex-col md:flex-row gap-4">
             <div className="space-y-6 md:w-2/3">
               {/* Artifact Name */}
               <div className="form-control gap-5">
                 <label className="label border-2 border-amber-500 p-4 rounded-md">
-                  <span className="label-text text-lg">Artifact Name</span>
+                  <span className="label-text text-lg bg-gradient-to-r from-amber-600 to-stone-900 bg-clip-text text-transparent font-bold py-3">
+                    Artifact Name
+                  </span>
                 </label>
-                <p className="text-xl">{artifactDetails.artifactName}</p>
+                <p className="text-xl font-semibold">
+                  {artifactDetails.artifactName}
+                </p>
               </div>
 
               {/* Artifact Type */}
               <div className="form-control gap-5">
                 <label className="label border-2 border-amber-500 p-4 rounded-md">
-                  <span className="label-text text-lg">Artifact Type</span>
+                  <span className="label-text text-lg bg-gradient-to-r from-amber-600 to-stone-900 bg-clip-text text-transparent font-bold py-3">
+                    Artifact Type
+                  </span>
                 </label>
-                <p className="text-xl">{artifactDetails.artifactType}</p>
+                <p className="text-xl font-semibold">
+                  {artifactDetails.artifactType}
+                </p>
               </div>
 
               {/* Historical Context */}
               <div className="form-control gap-5">
                 <label className="label border-2 border-amber-500 p-4 rounded-md">
-                  <span className="label-text text-lg">Historical Context</span>
+                  <span
+                    className="label-text text-lg bg-gradient-to-r from-amber-600 to-stone-900 bg-clip-text text-transparent font-bold 
+ py-3"
+                  >
+                    Historical Context
+                  </span>
                 </label>
-                <p className="text-xl">{artifactDetails.historicalContext}</p>
+                <p className="text-xl font-semibold">{artifactDetails.historicalContext}</p>
               </div>
 
               {/* Created At */}
               <div className="form-control gap-5">
                 <label className="label border-2 border-amber-500 p-4 rounded-md">
-                  <span className="label-text text-lg">Created At</span>
+                  <span
+                    className="label-text text-lg bg-gradient-to-r from-amber-600 to-stone-900 bg-clip-text text-transparent font-bold py-3"
+                  >
+                    Created At
+                  </span>
                 </label>
-                <p className="text-xl">{artifactDetails.createdAt}</p>
+                <p className="text-xl font-semibold">{artifactDetails.createdAt}</p>
               </div>
 
               {/* Discovered At */}
               <div className="form-control gap-5">
                 <label className="label border-2 border-amber-500 p-4 rounded-md">
-                  <span className="label-text text-lg">Discovered At</span>
+                  <span
+                    className="label-text text-lg bg-gradient-to-r from-amber-600 to-stone-900 bg-clip-text text-transparent font-bold py-3"
+                  >
+                    Discovered At
+                  </span>
                 </label>
-                <p className="text-xl">{artifactDetails.discoveredAt}</p>
+                <p className="text-xl font-semibold">{artifactDetails.discoveredAt}</p>
               </div>
 
               {/* Discovered By */}
               <div className="form-control gap-5">
                 <label className="label border-2 border-amber-500 p-4 rounded-md">
-                  <span className="label-text text-lg">Discovered By</span>
+                  <span
+                    className="label-text text-lg bg-gradient-to-r from-amber-600 to-stone-900 bg-clip-text text-transparent font-bold py-3"
+                  >
+                    Discovered By
+                  </span>
                 </label>
-                <p className="text-xl">{artifactDetails.discoveredBy}</p>
+                <p className="text-xl font-semibold">{artifactDetails.discoveredBy}</p>
               </div>
 
               {/* Present Location */}
               <div className="form-control gap-5">
                 <label className="label border-2 border-amber-500 p-4 rounded-md">
-                  <span className="label-text text-lg">Present Location</span>
+                  <span
+                    className="label-text text-lg bg-gradient-to-r from-amber-600 to-stone-900 bg-clip-text text-transparent font-bold py-3"
+                  >
+                    Present Location
+                  </span>
                 </label>
-                <p className="text-xl">{artifactDetails.presentLocation}</p>
+                <p className="text-xl font-semibold">{artifactDetails.presentLocation}</p>
               </div>
 
               {/* Added By (User info) */}
               <div className="form-control gap-5">
                 <label className="label border-2 border-amber-500 p-4 rounded-md">
-                  <span className="label-text text-lg">Added By</span>
+                  <span
+                    className="label-text text-lg bg-gradient-to-r from-amber-600 to-stone-900 bg-clip-text text-transparent font-bold py-3"
+                  >
+                    Added By
+                  </span>
                 </label>
-                <p className="text-xl">Name: {artifactDetails.addedBy.name}</p>
-                <p className="text-xl">Email: {artifactDetails.addedBy.email}</p>
+                <p className="text-xl font-semibold">Name: {artifactDetails.addedBy.name}</p>
+                <p className="text-xl font-semibold">
+                  Email: {artifactDetails.addedBy.email}
+                </p>
               </div>
             </div>
 
             {/* Artifact Image */}
             <div className="form-control gap-5 md:w-1/3">
               <label className="label border-2 border-amber-500 p-4 rounded-md">
-                <span className="label-text text-lg">Artifact Image</span>
+                <span
+                  className="label-text text-lg bg-gradient-to-r from-amber-600 to-stone-900 bg-clip-text text-transparent font-bold py-3"
+                >
+                  Artifact Image
+                </span>
               </label>
               <div className="border-2 border-stone-400 card">
                 <img
