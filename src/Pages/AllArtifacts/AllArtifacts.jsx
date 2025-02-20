@@ -1,6 +1,6 @@
 import { Helmet } from "react-helmet";
 import { useLoaderData } from "react-router-dom";
-import Artifact from "../Artifact";
+import Artifact from "../../Components/Artifact.jsx";
 
 const AllArtifacts = () => {
   const Artifacts = useLoaderData();
