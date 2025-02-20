@@ -123,7 +123,7 @@ const ArtifactPage = () => {
                 <img
                   src={artifactDetails.artifactImage}
                   alt={artifactDetails.artifactName}
-                  className="w-full h-auto max-h-80 object-cover rounded-xl"
+                  className="w-full h-auto md:max-h-80 object-cover rounded-xl"
                 />
               </div>
             </div>
