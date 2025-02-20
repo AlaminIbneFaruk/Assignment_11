@@ -21,14 +21,14 @@ const ErrorPage = () => {
             </p>
             <Link
               to="/"
-              className="mb-20 btn bg-gradient-to-b from-emerald-500 via-emerald-400 to-white text-black border-none"
+              className="mb-20 btn bg-gradient-to-r from-stone-900  to-amber-500 text-white border-none"
             >
               Go Back Home
             </Link>
           </div>
         </div>
         
-        <div className="absolute inset-0 bg-black opacity-50 z-0"></div>{" "}
+        <div className="absolute inset-0 bg-black opacity-50 z-0 w-[70vw] m-auto border-2 border-stone-500 h-[70vh]"></div>{" "}
         
       </div>
     </>
