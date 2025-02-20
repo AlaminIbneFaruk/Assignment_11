@@ -37,7 +37,7 @@ const Artifact = ({ artifact }) => {
           </button>
           <button
             onClick={() => handleDetails(artifact?._id)}
-            className="px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition"
+            className="px-4 py-2 bg-gradient-to-r from-stone-900 to-amber-500 btn-warning text-white font-semibold rounded-lg  transition text-base"
             aria-label="View artifact details"
           >
             View Details
