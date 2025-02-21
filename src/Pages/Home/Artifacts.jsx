@@ -14,7 +14,7 @@ const Artifacts = () => {
       <div className="text-center font-serif font-extrabold text-4xl md:text-4xl 
   bg-gradient-to-r from-amber-600 to-stone-900 bg-clip-text text-transparent 
   py-6 uppercase tracking-wider">Explore Unique Artifacts</div>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 text-xl m-20">{Artifacts.map(artifact=><Artifact artifact={artifact} key={artifact._id} >{artifact.artifactName}</Artifact>)}</div>
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 text-xl m-2">{Artifacts.map(artifact=><Artifact artifact={artifact} key={artifact._id} >{artifact.artifactName}</Artifact>)}</div>
       <div>
         <button
         onClick={handleView} 

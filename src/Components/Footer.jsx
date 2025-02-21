@@ -22,18 +22,20 @@ const Footer = () => {
         </nav>
         <nav>
           <h6 className="footer-title text-2xl">Navigation</h6>
-          <Link to="/" className="link link-hover">
-            Home
-          </Link>
-          <Link to="/all-Artifactss" className="link link-hover">
-            All Artifacts
-          </Link>
-          <Link to="/login" className="link link-hover">
-            Login
-          </Link>
-          <Link to="/register" className="link link-hover">
-            Register
-          </Link>
+          <div className="flex flex-col">
+            <Link to="/" className="link link-hover">
+              Home
+            </Link>
+            <Link to="/all-Artifactss" className="link link-hover">
+              All Artifacts
+            </Link>
+            <Link to="/login" className="link link-hover">
+              Login
+            </Link>
+            <Link to="/register" className="link link-hover">
+              Register
+            </Link>
+          </div>
         </nav>
       </div>
     </footer>

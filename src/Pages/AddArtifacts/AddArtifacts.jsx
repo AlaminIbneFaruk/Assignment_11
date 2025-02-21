@@ -66,7 +66,7 @@ const AddArtifact = () => {
         <title>Add Artifact | Artifacts Bazzar</title>
       </Helmet>
       <div>
-        <div className="hero flex justify-between bg-gradient-to-br from-stone-800 to-amber-400 min-h-screen gap-x-20">
+        <div className="hero flex flex-col md:flex-row justify-between bg-gradient-to-br from-stone-800 to-amber-400 min-h-screen gap-x-20">
           <div className="flex-1 ">
             <img src={image} className="w-full rounded-s-lg shadow-2xl mx-20" />
           </div>
