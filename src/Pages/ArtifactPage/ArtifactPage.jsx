@@ -25,7 +25,7 @@ const ArtifactPage = () => {
 
       try {
         const response = await fetch(
-          `http://localhost:5000/artifact-details/${id}`
+          `https://assignment-11-server-nu-steel.vercel.app/artifact-details/${id}`
         );
         const data = await response.json();
         if (response.ok) {

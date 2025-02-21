@@ -27,7 +27,7 @@ const Routes = createBrowserRouter([
           {
             path: "/",
             element: <Artifacts />,
-            loader: () => fetch("http://localhost:7000/artifacts"),
+            loader: () => fetch("https://assignment-11-server-nu-steel.vercel.app/artifacts"),
             errorElement: <ErrorF2F></ErrorF2F>,
           },
         ],
@@ -35,7 +35,7 @@ const Routes = createBrowserRouter([
       {
         path: "/all-artifacts",
         element: <AllArtifacts />,
-        loader: () => fetch("http://localhost:5000/all-Artifacts"),
+        loader: () => fetch("https://assignment-11-server-nu-steel.vercel.app/all-Artifacts"),
         errorElement: (
           <>
             <ErrorF2F></ErrorF2F>

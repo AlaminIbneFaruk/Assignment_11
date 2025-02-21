@@ -15,7 +15,7 @@ const MyArtifactPage = () => {
 
     const fetchArtifacts = async () => {
       try {
-        const res = await fetch(`http://localhost:5000/myartifacts/${user.uid}`);
+        const res = await fetch(`https://assignment-11-server-nu-steel.vercel.app/myartifacts/${user.uid}`);
         if (!res.ok) throw new Error("Failed to fetch artifacts");
 
         const data = await res.json();

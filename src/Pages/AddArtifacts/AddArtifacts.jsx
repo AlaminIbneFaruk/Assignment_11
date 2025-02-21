@@ -35,7 +35,7 @@ const AddArtifact = () => {
     e.preventDefault();
 
     try {
-      const response = await fetch("http://localhost:5000/add-artifact", {
+      const response = await fetch("https://assignment-11-server-nu-steel.vercel.app/add-artifact", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
