@@ -68,7 +68,7 @@ const AddArtifact = () => {
       <div>
         <div className="hero flex flex-col md:flex-row justify-between bg-gradient-to-br from-stone-800 to-amber-400 min-h-screen gap-x-20">
           <div className="flex-1 ">
-            <img src={image} className="w-full rounded-s-lg shadow-2xl mx-20" />
+            <img src={image} className="w-full rounded-s-lg shadow-2xl lg:mx-20" />
           </div>
           <div className="hero-content flex-col ">
             <div className="card bg-base-100 w-full shrink-0 shadow-2xl">
