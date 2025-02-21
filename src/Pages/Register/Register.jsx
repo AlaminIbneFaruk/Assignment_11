@@ -4,7 +4,7 @@ import { auth } from "../../Firebase/firebase.init.js";
 import { useContext, useState } from "react";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 import { AuthContext } from "../../Contexts/AuthProvider";
-import { useTypewriter } from "react-simple-typewriter";
+
 import { Helmet } from "react-helmet";
 import Lottie from "lottie-react";
 import registerLottie from "../../assets/lottie/register.json"
@@ -70,10 +70,7 @@ const Register = () => {
     event.preventDefault();
     setShowPassword(!showPassword);
   };
-  const [text] = useTypewriter({
-    words: ["WELCOME TO VISA BRIDGE", "REGISTER NOW"],
-    loop: Infinity,
-  });
+
   return (
     <>
       <Helmet>
@@ -90,7 +87,7 @@ const Register = () => {
           <div className="card bg-base-100 w-full max-w-sm mx-auto shrink-0 shadow-2xl">
             <form className="card-body" onSubmit={handleRegister}>
               <div className="text-center font-sans font-bold bg-gradient-to-t from-stone-600 to-amber-300  bg-clip-text text-transparent text-2xl ">
-                {text}
+                REGISTER NOW
               </div>
               <div className="form-control">
                 <label className="label">
