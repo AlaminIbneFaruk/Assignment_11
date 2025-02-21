@@ -1,12 +1,9 @@
 import { Link } from "react-router-dom";
 
 const Footer = () => {
-
   return (
-    <footer>
-      <div
-        className="footer justify-evenly items-center flex  py-10 w-auto mx-auto "
-      >
+    <footer className="w-full bg-gray-100 py-10">
+      <div className="container mx-auto flex flex-col md:flex-row justify-between items-center px-6 md:px-12 lg:px-20">
         <nav>
           <Link
             to="/"

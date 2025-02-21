@@ -17,7 +17,7 @@ const AllArtifacts = () => {
   py-4 uppercase tracking-wider">
           All Available Artifacts
         </div>
-        <div className="grid grid-cols-3 gap-10 text-xl px-20 py-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 text-xl px-20 py-10">
           {Artifacts.map((artifact) => (
             <Artifact key={artifact._id} artifact={artifact}>
             </Artifact>

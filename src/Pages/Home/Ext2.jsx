@@ -75,7 +75,7 @@ const Ext2 = () => {
                 <h2 className="card-title text-2xl font-bold text-gray-800 tracking-wide">
                   {artifact.title}
                 </h2>
-                <p className="text-gray-700 text-md leading-relaxed mt-3">
+                <p className="text-gray-700 text-xs md:text-md leading-relaxed mt-3">
                   {artifact.description}
                 </p>
               </div>

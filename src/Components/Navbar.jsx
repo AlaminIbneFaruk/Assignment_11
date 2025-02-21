@@ -48,8 +48,8 @@ const Navbar = () => {
             )}
           </ul>
         </div>
-        <Link to="/" className="btn btn-ghost text-2xl lg:text-3xl  font-sans font-bold">
-          <span className="relative  bg-gradient-to-tr from-lime-500 via-green-500 to-emerald-900 bg-clip-text text-transparent">
+        <Link to="/" className="btn btn-ghost text-base md:text-2xl lg:text-3xl  font-sans font-bold">
+          <span className="relative bg-gradient-to-tr from-lime-500 via-green-500 to-emerald-900 bg-clip-text text-transparent">
             Artifact Bazaar
           </span>
         </Link>
