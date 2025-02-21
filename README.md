@@ -1,73 +1,123 @@
-# Artifact Bazzar
+# Assignment 11 - Artifact Management App
 
-## Overview
-This project is a web application that allows users to authenticate, view artifacts, manage their own artifacts, and interact with them through features such as likes. The application is built with **React.js** for the frontend, **Express.js** for the backend, and **Firebase Authentication** for user authentication. **MongoDB** serves as the database for storing artifacts and user-related data.
+## Project Overview
 
-## Features
-### **Authentication Setup**
-- ✅ Firebase authentication configured
-- ✅ Google sign-in functionality implemented
-- ✅ Email/password sign-up and sign-in functionalities completed
-- ✅ Sign-out functionality integrated
+This is a full-stack MERN application for managing artifacts. Users can add, update, delete, and like artifacts. Authentication is handled using Firebase, and data is stored in MongoDB.
 
-### **Frontend Development**
-- ✅ Home page developed
-- ✅ Artifact Details Page completed
-- ✅ My Artifacts feature completed
-- ✅ Update functionality implemented
-- ✅ Delete functionality integrated
+## 🚀 Features
 
-### **User Interaction Features**
-- ✅ Like button functionality implemented (from Phase 5)
+- User authentication (Firebase)
+- Add, update, and delete artifacts
+- Like button functionality
+- Private routes for authentication-protected pages
+- Responsive UI with React
+- Express.js server with MongoDB database
 
-## Tech Stack
-- **Frontend:** React.js, Tailwind CSS
-- **Backend:** Express.js, Node.js
-- **Database:** MongoDB
-- **Authentication:** Firebase Authentication
-- **Other Tools:** React Router, Toastify
+## 🛠️ Technologies Used
 
-## Installation & Setup
-### **1. Clone the repository:**
+### Client-Side (Frontend)
+
+- React.js
+- React Router
+- Tailwind CSS
+- Firebase Authentication
+- Context API
+- Lottie Animations
+
+### Server-Side (Backend)
+
+- Node.js
+- Express.js
+- MongoDB
+- JWT Authentication
+
+## 📂 File Structure
+
+### Client-Side (`src/`)
+
+- **Pages/**: Contains different pages such as Home, Login, Register, MyArtifacts, LikedArtifacts, UpdateArtifact, etc.
+- **Components/**: Shared components like Navbar, Footer, Artifact Card, etc.
+- **Contexts/**: Context API setup for global state management.
+- **Firebase/**: Firebase configuration file.
+- **assets/Lottie/**: Lottie JSON animations.
+
+### Server-Side
+
+The backend handles API requests and database operations.
+
+- Routes for authentication, artifacts, and user operations.
+- Uses MongoDB for data storage.
+- Implements JWT for secure API calls.
+
+## Installation and Setup
+
+### Prerequisites
+
+- Node.js & npm installed
+- MongoDB setup
+- Firebase project created
+
+### Clone the Repositories
+
 ```sh
+# Clone the client repo
 git clone https://github.com/AlaminIbneFaruk/Assignment_11.git
+
+# Clone the server repo
+git clone https://github.com/AlaminIbneFaruk/Assignment-11-Server.git
+```
+
+### Install Dependencies
+
+#### Client Side
+
+```sh
 cd Assignment_11
-```
-
-### **2. Install dependencies:**
-```sh
 npm install
 ```
 
-### **3. Set up Firebase Authentication:**
-- Create a Firebase project at [Firebase Console](https://console.firebase.google.com/)
-- Enable **Authentication** (Google Sign-In & Email/Password)
-- Obtain your Firebase **Config Object** and replace it in the `.env` file
+#### Server Side
 
-### **4. Start the development server:**
 ```sh
-npm run dev
+cd Assignment-11-Server
+npm install
 ```
 
-### **5. Start the backend server:**
+### Environment Variables
+
+Create a `.env` file in the server directory with:
+
+```
+PORT=5000
+MONGO_URI=your_mongodb_connection_string
+JWT_SECRET=your_secret_key
+```
+
+### Running the Application
+
+#### Start the Server
+
 ```sh
-cd server
-npm install
+npm run server
+```
+
+#### Start the Client
+
+```sh
 npm start
 ```
 
-## Repository
-- GitHub Repository: [Assignment_11](https://github.com/AlaminIbneFaruk/Assignment_11)
+## Deployment
 
-## Future Enhancements
-- 🔜 **Search functionality** for artifacts
-- 🔜 **JWT Authentication** for secure API access
-- 🔜 **Commenting system** for user engagement
-- 🔜 **Sorting and filtering** options for better user experience
+- The client is deployed at: [Firebase Hosting](https://assignment-11-62e47.web.app)
+- The server is hosted on Vercel
+- Live link: https\://assignment-11-62e47.web.app/
+
+## Contributing
+
+Pull requests are welcome but for major changes, please open an issue first to discuss what you’d like to change.
 
 ## License
-This project is open-source under the **MIT License**.
 
----
-### 🚀 Happy Coding! 🎉
+MIT License
 

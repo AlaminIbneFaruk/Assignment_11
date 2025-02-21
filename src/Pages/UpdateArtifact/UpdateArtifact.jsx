@@ -23,7 +23,7 @@ const UpdateArtifact = () => {
       if (!id) return;
       try {
         const response = await fetch(
-          `http://localhost:5000/artifact-details/${id}`
+          `https://assignment-11-62e47.web.app/artifact-details/${id}`
         );
         const data = await response.json();
         if (response.ok) {

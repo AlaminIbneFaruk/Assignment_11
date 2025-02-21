@@ -46,7 +46,7 @@ const ArtifactPage = () => {
       <div className="card w-full max-w-6xl shadow-xl bg-base-100">
         <div className="card-body">
           <h2
-            className=" text-center mb-6 font-serif font-extrabold text-3xl md:text-4xl 
+            className=" text-center mb-6 font-serif text-3xl md:text-4xl 
   bg-gradient-to-r from-amber-600 to-stone-900 bg-clip-text text-transparent font-bold 
  py-3 uppercase tracking-wider"
           >
