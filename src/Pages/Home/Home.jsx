@@ -3,6 +3,7 @@ import Ext1 from "./Ext1.jsx";
 import Ext2 from "./Ext2.jsx";
 import { Helmet } from "react-helmet";
 import { Outlet } from "react-router-dom";
+import CategoriesSection from "./CategoriesSection.jsx";
 const Home = () => {
   return (
     <>
@@ -12,6 +13,7 @@ const Home = () => {
       </Helmet>
       <div className="">
         <Hero/>
+        <CategoriesSection/>
         <Outlet></Outlet>
         <Ext1/>
         <Ext2/>
