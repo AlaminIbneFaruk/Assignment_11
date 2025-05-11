@@ -1,128 +1,75 @@
-import { motion } from "framer-motion";
-import PropTypes from "prop-types";
+import { Carousel } from "react-responsive-carousel";
+import { motion, useScroll, useTransform } from "framer-motion";
+import "react-responsive-carousel/lib/styles/carousel.min.css";
+import { Link } from "react-router-dom";
+import { useRef } from "react";
+
+const animationSettings = {
+  initial: { y: 20, opacity: 0 },
+  animate: { y: 0, opacity: 1 },
+  transition: { duration: 0.8, ease: "easeInOut" },
+};
 
 const Hero = () => {
   const image1 = "https://i.ibb.co/DVcGRm3/images.jpg";
-  const image2 =
-    "https://i.ibb.co/mhw2yDV/set-archeology-tools-science-equipment-260nw-1410627773.webp";
-  const image3 =
-    "https://i.ibb.co/BgLCnXq/1200px-Everlight-Artefacts-concept-art.jpg";
+  const image2 = "https://i.ibb.co/mhw2yDV/set-archeology-tools-science-equipment-260nw-1410627773.webp";
+  const image3 = "https://i.ibb.co/BgLCnXq/1200px-Everlight-Artefacts-concept-art.jpg";
+
+  const parallaxRef = useRef(null);
+  const { scrollYProgress } = useScroll({
+    target: parallaxRef,
+    offset: ["start end", "end start"],
+  });
+  const backgroundY = useTransform(scrollYProgress, [0, 1], ["0%", "-20%"]);
 
   return (
-    <div className="carousel w-full ">
-      {/* Slide 1 */}
-      <div id="slide1" className="carousel-item relative w-full h-auto">
-        <div className="hero min-h-screen text-white">
-          <div className="hero-content flex flex-col-reverse bg-opacity-60 bg-amber-800 rounded-lg md:flex-row items-center max-w-screen-lg mx-auto px-6">
+    <div className="carousel-container w-full bg-base-100 text-neutral-content">
+      <Carousel showThumbs={true} infiniteLoop autoPlay interval={5000} transitionTime={800} lazyLoad>
+        <div className="hero min-h-[60vh]">
+          <div className="hero-content flex flex-col-reverse bg-opacity-80 rounded-lg md:flex-row items-center mx-auto px-12 h-full">
             <motion.img
               src={image1}
-              className="w-full md:w-1/3 rounded-lg shadow-2xl"
-              animate={{ y: [0, 20, 0, 20, 0] }}
-              transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
+              alt="Ancient Artifact 1"
+              className="w-auto h-[50vh] md:w-auto rounded-lg shadow-2xl object-cover"
+              animate={{ y: [0, 20, 0] }}
+              transition={{ duration: 8, repeat: Infinity }}
+              loading="lazy"
             />
-            <div className=" rounded-lg w-full md:w-1/2 text-center md:text-left lg:min-h-[calc(80vh-10px)] flex flex-col justify-center">
-              <h1 className="text-3xl md:text-5xl font-bold">
-                Discover the Echoes of History
-              </h1>
-              <p className="py-4 text-sm md:text-md">
-                Explore rare artifacts that tell the stories of civilizations
-                past. From forgotten temples to legendary treasures, embark on a
-                journey through time.
-              </p>
-              <button className="btn bg-gradient-to-r from-stone-600 to-amber-300 text-white">
-                Start Your Journey
-              </button>
+            <div className="rounded-lg w-full md:w-2/3 text-center md:text-left flex flex-col justify-center">
+              <h1 className="text-4xl md:text-5xl font-bold">Discover the Echoes of History</h1>
+              <p className=" text-md md:text-lg">Uncover artifacts that whisper stories of ancient civilizations.</p>
+              <Link to="/all-artifacts" aria-label="Start Your Journey" className="btn bg-gradient-to-r from-stone-700 to-amber-300 text-white px-4 rounded-lg shadow-lg hover:from-gray-700 hover:to-gray-500 transition-all duration-300">Start Your Journey</Link>
             </div>
           </div>
         </div>
-        <Navigation slideA="#slide3" slideB="#slide2" />
-      </div>
 
-      {/* Slide 2 */}
-      <div id="slide2" className="carousel-item relative w-full h-auto">
-        <div className="hero min-h-screen text-white">
-          <div className="hero-content flex flex-col md:flex-row items-center max-w-screen-xl mx-auto px-6 bg-opacity-60 bg-amber-800 rounded-lg">
-            <div className=" p-6  w-full md:w-1/2 lg:min-h-[calc(80vh-12px)] text-center md:text-left lg:flex lg:flex-col lg:justify-center">
-              <h1 className="text-3xl md:text-5xl font-bold">
-                Timeless Treasures Await
-              </h1>
-              <p className="py-4 text-sm md:text-md">
-                Dive into an unparalleled collection of ancient relics that
-                shaped humanity. Experience the artistry, mythology, and
-                mysteries of ancient cultures.
-              </p>
-              <button className="btn bg-gradient-to-r from-stone-600 to-amber-300 text-white">
-                Browse Artifacts
-              </button>
+        <div className="hero min-h-[50vh]">
+          <div className="hero-content flex flex-col md:flex-row items-center mx-auto px-6 bg-opacity-70 rounded-lg ">
+            <div className=" w-full md:w-1/2 text-center md:text-left flex flex-col justify-center">
+              <h1 className="text-4xl md:text-5xl font-bold">Timeless Treasures Await</h1>
+              <p className=" text-md md:text-lg">Explore relics that shaped humanity.</p>
+              <Link to="/all-artifacts" aria-label="Browse Artifacts" className="btn bg-gradient-to-r from-stone-700 to-amber-300 text-white px-4 rounded-lg shadow-lg hover:from-gray-700 hover:to-gray-500 transition-all duration-300">Browse Artifacts</Link>
             </div>
             <motion.img
               src={image2}
-              className="w-full md:w-1/2 rounded-lg shadow-2xl"
-              initial={{ x: "100%" }}
-              animate={{ x: "0px" }}
+              alt="Ancient Artifact 2"
+              className="w-full h-auto md:w-1/3 rounded-lg shadow-2xl object-cover max-h-[calc(60vh-4vh)]"
+              {...animationSettings}
+              loading="lazy"
             />
           </div>
         </div>
-        <Navigation slideA="#slide1" slideB="#slide3" />
-      </div>
 
-      {/* Slide 3 */}
-      <div id="slide3" className="carousel-item relative w-full h-auto">
-        <div
-          className="hero min-h-screen bg-cover bg-center text-white"
-          style={{ backgroundImage: `url(${image3})` }}
-        >
-          <div className="hero-content flex flex-col md:flex-row items-center max-w-screen-xl mx-auto px-6">
-            <div className="bg-opacity-60 bg-black p-6 rounded-lg w-full md:w-2/3 text-center md:text-left md:min-h-[calc(70vh-10px)] lg:flex lg:flex-col lg:justify-center lg:items-center">
-              <h1 className="text-3xl md:text-5xl font-bold text-center ">
-                <span className="bg-gradient-to-b from-amber-800 to-yellow-400 bg-clip-text text-transparent">
-                  Experience{" "}
-                </span>
-                <span className="bg-gradient-to-b from-amber-800 to-yellow-400 bg-clip-text text-transparent">
-                  the{" "}
-                </span>
-                <span className="bg-gradient-to-b from-amber-800 to-yellow-400 bg-clip-text text-transparent">
-                  Magic{" "}
-                </span>
-                <span className="bg-gradient-to-b from-amber-800 to-yellow-400 bg-clip-text text-transparent">
-                  of{" "}
-                </span>
-                <span className="bg-gradient-to-b from-amber-800 to-yellow-400 bg-clip-text text-transparent">
-                  Antiquity
-                </span>
-              </h1>
-
-              <p className="py-4 text-sm md:text-md text-center">
-                Unearth artifacts that hold the wisdom of ancient kings,
-                scholars, and artisans. Discover the stories etched in stone,
-                metal, and time.
-              </p>
-              <button className="btn bg-gradient-to-r from-stone-600 to-amber-300 text-white">
-                Shop Artifacts
-              </button>
-            </div>
-          </div>
-        </div>
-        <Navigation slideB="#slide1" slideA="#slide2" />
-      </div>
+        <motion.div ref={parallaxRef} className="hero bg-cover text-white min-h-[60vh] md:min-h-[70vh]" style={{ backgroundImage: `linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0)), url(${image3})`, backgroundSize: "cover", backgroundPositionY: backgroundY }}>
+          <motion.div className="hero-content flex flex-col items-center mx-auto px-6 h-full justify-center" {...animationSettings}>
+            <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-center">Experience the Magic of Antiquity</h1>
+            <p className=" text-sm sm:text-md md:text-lg text-center max-w-md">Unearth artifacts that hold the wisdom of ancient civilizations.</p>
+            <Link to="/all-artifacts" aria-label="Shop Artifacts" className="btn bg-gradient-to-r from-stone-700 to-amber-300 text-white px-6 rounded-md hover:from-gray-700 hover:to-gray-500 transition-all duration-300">Shop Artifacts</Link>
+          </motion.div>
+        </motion.div>
+      </Carousel>
     </div>
   );
-};
-
-// Carousel Navigation Component
-const Navigation = ({ slideA, slideB }) => (
-  <div className="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
-    <a href={slideA} className="btn btn-circle btn-outline btn-success">
-      ❮
-    </a>
-    <a href={slideB} className="btn btn-circle btn-outline btn-success">
-      ❯
-    </a>
-  </div>
-);
-Navigation.propTypes = {
-  slideA: PropTypes.string.isRequired,
-  slideB: PropTypes.string.isRequired,
 };
 
 export default Hero;
