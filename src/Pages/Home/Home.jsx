@@ -7,7 +7,7 @@ const Home = () => {
   return (
     <>
       <Helmet>
-      <link rel="icon" type="image/svg+xml" href="https://i.ibb.co.com/nrgCfMk/images-7.jpg" />
+        <link rel="icon" type="image/svg+xml" href="https://i.ibb.co.com/nrgCfMk/images-7.jpg" />
         <title>Home | Artifacts Bazzar</title>
       </Helmet>
       <div className="">

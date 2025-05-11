@@ -14,6 +14,7 @@ import LikedArtifacts from "../Pages/LikedArtifacts/LikedArtifacts.jsx";
 import ErrorF2F from "../Pages/ErrorF2F/ErrorF2F.jsx";
 import Artifacts from "../Pages/Home/Artifacts.jsx";
 import UpdateArtifact from "../Pages/UpdateArtifact/UpdateArtifact.jsx";
+import Contact from "../Pages/Contact.jsx";
 
 const Routes = createBrowserRouter([
   {
@@ -90,6 +91,10 @@ const Routes = createBrowserRouter([
         path: "/register",
         element: <Register />,
       },
+      {
+        path: "/contacts",
+        element:<Contact/>
+      }
       
     ],
   },
