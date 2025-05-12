@@ -10,10 +10,8 @@ import ErrorPage from "../Pages/ErrorPages/ErrorPage.jsx";
 import Layout from "../Layout/Layout.jsx";
 import PrivateRoutes from "./PrivateRoutes.jsx";
 import ArtifactPage from "../Pages/ArtifactPage/ArtifactPage.jsx";
-import LikedArtifacts from "../Pages/LikedArtifacts/LikedArtifacts.jsx";
 import ErrorF2F from "../Pages/ErrorF2F/ErrorF2F.jsx";
 import Artifacts from "../Pages/Home/Artifacts.jsx";
-import UpdateArtifact from "../Pages/UpdateArtifact/UpdateArtifact.jsx";
 import Contact from "../Pages/Contact.jsx";
 
 const Routes = createBrowserRouter([
@@ -60,14 +58,6 @@ const Routes = createBrowserRouter([
         ),
       },
       {
-        path: "/liked-artifacts/:userid",
-        element: (
-          <PrivateRoutes>
-            <LikedArtifacts />
-          </PrivateRoutes>
-        ),
-      },
-      {
         path: `/artifact-details/:id`,
         element: (
           <PrivateRoutes>
@@ -75,14 +65,7 @@ const Routes = createBrowserRouter([
           </PrivateRoutes>
         ),
       },
-      {
-        path: `/update-artifact/:id`,
-        element: (
-          <PrivateRoutes>
-            <UpdateArtifact />
-          </PrivateRoutes>
-        ),
-      },
+      
       {
         path: "/login",
         element: <Login />,
