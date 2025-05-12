@@ -59,7 +59,6 @@ const Navbar = () => {
               </button>
               <ul tabIndex={0} className="menu menu-sm dropdown-content rounded-box shadow-md z-10 mt-3 w-52 p-2 bg-gradient-to-r from-stone-600 to-amber-300 text-white">
                 <li><Link to={`/myartifacts/${user?.uid}`}>My Artifacts</Link></li>
-                <li><Link to={`/liked-artifacts/${user?.uid}`}>Liked Artifacts</Link></li>
               </ul>
             </div>
             <button className="btn bg-gradient-to-r from-stone-600 to-amber-300 text-white" onClick={signOutUser} aria-label="Log Out">Log Out</button>

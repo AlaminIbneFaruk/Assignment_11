@@ -77,10 +77,11 @@ const ArtifactPage = () => {
             <p className="text-md">Email: {artifactDetails.addedBy.email}</p>
           </div>
           <div className="card-actions justify-end">
-            <Link to={`/update-artifact/${id}`}>  
-              <button className="btn btn-primary">
-                Update Artifact
-              </button>
+            <Link
+              to="/"
+              className="btn bg-gradient-to-r from-stone-700 to-amber-300 text-white font-semibold rounded-lg transition text-base"
+            >
+              Back to Home
             </Link>
           </div>
         </div>
