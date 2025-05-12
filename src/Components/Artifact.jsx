@@ -17,13 +17,15 @@ const Artifact = ({ artifact }) => {
   };
 
   return (
-    <div className="rounded-2xl shadow-lg overflow-hidden bg-base-100 border border-base-300 flex flex-col transition-colors">
-      <img
-        className="w-full h-48 object-cover border-b-2 border-base-300"
-        src={artifact?.artifactImage}
-        alt={artifact?.artifactName}
-      />
-      <div className="p-4">
+    <article className="rounded-2xl shadow-lg overflow-hidden bg-base-100 border border-base-300 flex flex-col transition-colors" aria-label={artifact?.artifactName}>
+      <figure>
+        <img
+          className="w-full h-48 object-cover border-b-2 border-base-300"
+          src={artifact?.artifactImage}
+          alt={artifact?.artifactName}
+        />
+      </figure>
+      <header className="p-4">
         <h2 className="text-lg font-semibold text-base-content">
           {artifact?.artifactName}
         </h2>
@@ -33,29 +35,29 @@ const Artifact = ({ artifact }) => {
         <p className="text-sm text-base-content mt-2">
           {artifact?.presentLocation}
         </p>
-        <div className="flex items-center justify-between mt-4">
-          <button
-            className="btn btn-outline btn-warning text-base-content flex items-center gap-1"
-            onClick={handleLike}
-            aria-label="Like this artifact"
-          >
-            <span className="text-neutral-content flex items-center gap-1">
-              <AiOutlineLike />
-              <span>
-                Like <span>{likeCount}</span>
-              </span>
+      </header>
+      <footer className="p-4 flex items-center justify-between mt-4">
+        <button
+          className="btn btn-outline btn-warning text-base-content flex items-center gap-1"
+          onClick={handleLike}
+          aria-label="Like this artifact"
+        >
+          <span className="text-neutral-content flex items-center gap-1">
+            <AiOutlineLike />
+            <span>
+              Like <span>{likeCount}</span>
             </span>
-          </button>
-          <button
-            onClick={() => handleDetails(artifact?._id)}
-            className="btn bg-gradient-to-r from-stone-700 to-amber-300 text-white font-semibold rounded-lg transition text-base"
-            aria-label="View artifact details"
-          >
-            View Details
-          </button>
-        </div>
-      </div>
-    </div>
+          </span>
+        </button>
+        <button
+          onClick={() => handleDetails(artifact?._id)}
+          className="btn bg-gradient-to-r from-stone-700 to-amber-300 text-white font-semibold rounded-lg transition text-base"
+          aria-label="View artifact details"
+        >
+          View Details
+        </button>
+      </footer>
+    </article>
   );
 };
 

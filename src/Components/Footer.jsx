@@ -2,9 +2,9 @@ import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
-    <footer className="w-full bg-base-100 text-base-content py-10 transition-colors">
+    <footer className="w-full bg-base-100 text-base-content py-10 transition-colors" role="contentinfo">
       <div className="container mx-auto flex flex-col md:flex-row justify-between items-center px-6 md:px-12 lg:px-20">
-        <nav>
+        <nav aria-label="Footer Navigation">
           <Link to="/" className="btn btn-ghost mb-2">
             <img
               src="https://i.ibb.co.com/rKKSN4Bt/Ancient-Bazzar.png"
@@ -24,21 +24,13 @@ const Footer = () => {
             </p>
           </div>
         </nav>
-        <nav>
+        <nav aria-label="Footer Links">
           <h6 className="footer-title text-2xl">Navigation</h6>
-          <div className="flex flex-col">
-            <Link to="/" className="link link-hover">
-              Home
-            </Link>
-            <Link to="/all-Artifactss" className="link link-hover">
-              All Artifacts
-            </Link>
-            <Link to="/login" className="link link-hover">
-              Login
-            </Link>
-            <Link to="/register" className="link link-hover">
-              Register
-            </Link>
+          <div className="flex flex-col" role="navigation">
+            <Link to="/" className="link link-hover">Home</Link>
+            <Link to="/all-Artifactss" className="link link-hover">All Artifacts</Link>
+            <Link to="/login" className="link link-hover">Login</Link>
+            <Link to="/register" className="link link-hover">Register</Link>
           </div>
         </nav>
       </div>

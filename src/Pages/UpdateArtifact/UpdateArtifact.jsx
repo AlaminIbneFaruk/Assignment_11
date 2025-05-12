@@ -41,12 +41,10 @@ const UpdateArtifact = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    // Validate required fields
     if (!artifactDetails.artifactName || !artifactDetails.artifactType) {
       alert("Please fill in all required fields.");
       return;
     }
-
     try {
       const response = await fetch(`https://assignment-11-server-nu-steel.vercel.app/artifactupdate/${id}`, {
         method: "PUT", // Use PUT for updating
@@ -55,19 +53,13 @@ const UpdateArtifact = () => {
         },
         body: JSON.stringify(artifactDetails), // Send the updated artifact details
       });
-
       if (!response.ok) {
         const errorData = await response.json();
         throw new Error(errorData.message || "Failed to update artifact!");
       }
-
       const updatedArtifact = await response.json();
       console.log("Artifact updated successfully:", updatedArtifact);
       alert("Artifact updated successfully!");
-
-      // Optionally, redirect or reset the form
-      // e.g., redirect to another page or clear the form
-
     } catch (error) {
       console.error("Error updating artifact:", error);
       alert(error.message);

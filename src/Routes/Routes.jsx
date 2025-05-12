@@ -76,7 +76,7 @@ const Routes = createBrowserRouter([
         ),
       },
       {
-        path: `/artifactupdate/:id`,
+        path: `/update-artifact/:id`,
         element: (
           <PrivateRoutes>
             <UpdateArtifact />
