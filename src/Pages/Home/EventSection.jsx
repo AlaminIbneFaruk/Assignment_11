@@ -76,13 +76,13 @@ const EventSection = () => {
   ];
 
   return (
-    <section className="p-4 rounded-2xl shadow-lg">
+    <section className="px-6 rounded-2xl shadow-lg">
       <motion.h2
         initial="hidden"
         animate="visible"
         variants={fadeIn}
-        className="my-16 text-center font-serif font-extrabold text-4xl md:text-4xl 
-        bg-gradient-to-r from-stone-600 to-amber-300 bg-clip-text text-transparent 
+        className="my-12 py-12 text-center font-serif font-extrabold text-4xl md:text-4xl 
+        bg-gradient-to-r from-stone-700 to-amber-300 bg-clip-text text-transparent 
         uppercase tracking-wider"
       >
         Upcoming Events
@@ -91,11 +91,12 @@ const EventSection = () => {
         initial="hidden"
         animate="visible"
         variants={fadeIn}
-        className="grid grid-cols-1 md:grid-cols-3 gap-6"
+        className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-4"
       >
         {events.map((event, index) => (
           <EventCard key={index} {...event} />
         ))}
+        
       </motion.div>
     </section>
   );

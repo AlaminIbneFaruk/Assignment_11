@@ -14,7 +14,7 @@ const Artifacts = () => {
     <div className=" text-5xl ">
       <div className="my-16 text-center font-serif font-extrabold text-4xl md:text-4xl 
         bg-gradient-to-r from-stone-600 to-amber-300 bg-clip-text text-transparent 
-         uppercase tracking-wider">
+        uppercase tracking-wider">
         Explore Unique Artifacts
       </div>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 px-4 text-xl lg:my-1">

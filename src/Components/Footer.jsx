@@ -2,20 +2,24 @@ import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
-    <footer className="w-full bg-gray-100 py-10">
+    <footer className="w-full bg-base-100 text-base-content py-10 transition-colors">
       <div className="container mx-auto flex flex-col md:flex-row justify-between items-center px-6 md:px-12 lg:px-20">
         <nav>
-          <Link
-            to="/"
-            className="btn btn-ghost text-5xl font-sans font-extrabold bg-gradient-to-tr from-lime-500 via-green-500 to-emerald-900 bg-clip-text text-transparent mb-2"
-          >
-            ARTIFACT BAZZAR
+          <Link to="/" className="btn btn-ghost mb-2">
+            <img
+              src="https://i.ibb.co.com/rKKSN4Bt/Ancient-Bazzar.png"
+              alt="Ancient Bazaar Logo"
+              className="w-auto h-8"
+            />
+            <p className="text-5xl font-sans font-extrabold bg-gradient-to-r from-stone-600 to-amber-300 bg-clip-text text-transparent">
+              ARTIFACT BAZZAR
+            </p>
           </Link>
           <div className="px-5">
             <p className="text-2xl"># Artifacts Bazzar.Ltd </p>
             <p>Where History Meets Memories.</p>
             <p className="py-4">
-              Copyright © {new Date().getFullYear()} - All right reserved by
+              Copyright © {new Date().getFullYear()} - All rights reserved by
               Artifacts Bazzar Ltd
             </p>
           </div>

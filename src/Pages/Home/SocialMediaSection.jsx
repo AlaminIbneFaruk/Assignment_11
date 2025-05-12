@@ -113,10 +113,10 @@ SocialMediaCard.propTypes = {
 
 const SocialMediaShowcase = () => {
   return (
-    <div className="my-4 py-8 px-4 bg-base-100 text-base-content">
+    <div className="px-6 bg-base-100 text-base-content">
       <h1
-        className="text-center font-serif font-extrabold text-3xl md:text-4xl mb-8 
-        bg-gradient-to-r from-amber-500 to-stone-800 bg-clip-text text-transparent 
+        className="my-12 py-12 text-center font-serif font-extrabold text-3xl md:text-4xl mb-8 
+        bg-gradient-to-r from-stone-700 to-amber-300 bg-clip-text text-transparent 
         uppercase tracking-wider"
       >
         Social Media Showcase
