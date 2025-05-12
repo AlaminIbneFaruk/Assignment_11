@@ -5,6 +5,7 @@ import CategoriesSection from "./CategoriesSection.jsx";
 import EventSection from "./EventSection.jsx";
 import SocialMediaSection from "./SocialMediaSection.jsx";
 import CaseStudies from "./CaseStudies.jsx";
+import FeaturedDonors from "./FeaturedDonors.jsx";
 const Home = () => {
   return (
     <>
@@ -19,6 +20,7 @@ const Home = () => {
         <SocialMediaSection/>
         <EventSection/>
         <CaseStudies/>
+        <FeaturedDonors/>
       </div>
     </>
   );

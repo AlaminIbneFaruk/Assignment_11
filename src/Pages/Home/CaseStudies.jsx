@@ -26,7 +26,7 @@ const artifactCaseStudies = [
 
 const CaseStudies = () => {
   return (
-    <div className=" bg-gray-100 dark:bg-gray-900">
+    <div className=" bg-gray-100 dark:bg-gray-900 pb-4">
       <div className=" mx-auto px-4">
         <h2
           className="my-12 pt-16 text-center font-serif font-extrabold text-4xl 

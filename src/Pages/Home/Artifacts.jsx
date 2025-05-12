@@ -11,8 +11,8 @@ const Artifacts = () => {
   };
 
   return (
-    <div className=" text-5xl ">
-      <div className="my-16 text-center font-serif font-extrabold text-4xl md:text-4xl 
+    <div className="px-6 text-5xl ">
+      <div className="my-12 py-12 text-center font-serif font-extrabold text-4xl md:text-4xl 
         bg-gradient-to-r from-stone-600 to-amber-300 bg-clip-text text-transparent 
         uppercase tracking-wider">
         Explore Unique Artifacts

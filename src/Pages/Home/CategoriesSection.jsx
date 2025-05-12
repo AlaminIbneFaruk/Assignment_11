@@ -41,9 +41,9 @@ const CategoriesSection = () => {
   ];
 
   return (
-    <div className="text-neutral-content pb-8">
+    <div className="px-6 text-neutral-content">
       <div
-        className="my-8 text-center font-serif font-extrabold text-3xl md:text-4xl 
+        className="my-12 py-12 text-center font-serif font-extrabold text-3xl md:text-4xl 
         bg-gradient-to-r from-stone-700 to-amber-300 bg-clip-text text-transparent 
         uppercase tracking-wider "
       >
