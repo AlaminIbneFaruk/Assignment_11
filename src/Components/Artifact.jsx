@@ -17,7 +17,7 @@ const Artifact = ({ artifact }) => {
   };
 
   return (
-    <div className="rounded-2xl shadow-lg overflow-hidden bg-base-100 border border-base-300 flex flex-col transition-colors">
+    <div className="rounded-2xl shadow-lg overflow-hidden bg-base-100 border border-base-400 flex flex-col transition-colors">
       <img
         className="w-full h-48 object-cover border-b-2 border-base-300"
         src={artifact?.artifactImage}
