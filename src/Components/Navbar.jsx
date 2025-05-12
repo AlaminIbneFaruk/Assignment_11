@@ -81,10 +81,10 @@ const Navbar = () => {
           )}
         </ul>
       </div>
-      <div className="navbar-end">
+      <div className="navbar-end flex items-center gap-2">
         <DarkModeToggle />
         {!user ? (
-          <div>
+          <div className="flex items-center gap-2">
             <Link to="/login" className="btn">
               Login
             </Link>

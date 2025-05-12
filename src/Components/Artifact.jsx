@@ -5,7 +5,7 @@ import { useNavigate } from "react-router-dom";
 
 const Artifact = ({ artifact }) => {
   const navigate = useNavigate();
-  
+
   const [likeCount, setLikeCount] = useState(Number(artifact.likeCounts || 0));
 
   const handleLike = () => {
@@ -17,27 +17,38 @@ const Artifact = ({ artifact }) => {
   };
 
   return (
-    <div className="rounded-2xl shadow-lg overflow-hidden bg-white border border-gray-200">
+    <div className="rounded-2xl shadow-lg overflow-hidden bg-base-100 border border-base-300 flex flex-col transition-colors">
       <img
-        className="w-full h-48 object-cover border-b-2 border-black"
+        className="w-full h-48 object-cover border-b-2 border-base-300"
         src={artifact?.artifactImage}
         alt={artifact?.artifactName}
       />
       <div className="p-4">
-        <h2 className="text-lg font-semibold text-gray-800 text-center">{artifact?.artifactName}</h2>
-        <p className="text-sm text-gray-600 mt-2 text-center">{artifact?.historicalContext}</p>
+        <h2 className="text-lg font-semibold text-base-content">
+          {artifact?.artifactName}
+        </h2>
+        <p className="text-sm text-base-content mt-2">
+          {artifact?.artifactType}
+        </p>
+        <p className="text-sm text-base-content mt-2">
+          {artifact?.presentLocation}
+        </p>
         <div className="flex items-center justify-between mt-4">
           <button
-            className="btn btn-outline flex items-center gap-1"
+            className="btn btn-outline btn-warning text-base-content flex items-center gap-1"
             onClick={handleLike}
             aria-label="Like this artifact"
           >
-            <AiOutlineLike />
-            Like <span>{likeCount}</span>
+            <span className="text-neutral-content flex items-center gap-1">
+              <AiOutlineLike />
+              <span>
+                Like <span>{likeCount}</span>
+              </span>
+            </span>
           </button>
           <button
             onClick={() => handleDetails(artifact?._id)}
-            className="px-4 py-2 bg-gradient-to-r from-stone-900 to-amber-500 btn-warning text-white font-semibold rounded-lg  transition text-base"
+            className="btn bg-gradient-to-r from-stone-700 to-amber-300 text-white font-semibold rounded-lg transition text-base"
             aria-label="View artifact details"
           >
             View Details
@@ -51,8 +62,9 @@ const Artifact = ({ artifact }) => {
 Artifact.propTypes = {
   artifact: PropTypes.shape({
     artifactName: PropTypes.string.isRequired,
-    historicalContext: PropTypes.string.isRequired,
     artifactImage: PropTypes.string.isRequired,
+    artifactType: PropTypes.string.isRequired,
+    presentLocation: PropTypes.string.isRequired,
     likeCounts: PropTypes.number,
     _id: PropTypes.string.isRequired,
   }).isRequired,
