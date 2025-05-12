@@ -28,7 +28,7 @@ const Navbar = () => {
         </div>
         <Link to="/" className="btn btn-ghost text-base md:text-2xl lg:text-3xl font-sans font-bold" aria-label="Home">
           <img src="https://i.ibb.co.com/rKKSN4Bt/Ancient-Bazzar.png" alt="Ancient Bazaar Logo" className="w-auto h-8" />
-          <span className="bg-gradient-to-r from-stone-600 to-amber-300 bg-clip-text text-transparent">Artifact Bazaar</span>
+          <span className="bg-gradient-to-r from-stone-700 to-amber-300 bg-clip-text text-transparent">Artifact Bazaar</span>
         </Link>
       </nav>
       <nav className="navbar-center hidden lg:flex" aria-label="Desktop navigation">
@@ -44,7 +44,7 @@ const Navbar = () => {
         {!user ? (
           <div className="flex items-center gap-2">
             <Link to="/login" className="btn">Login</Link>
-            <Link to="/register" className="btn bg-gradient-to-r from-stone-600 to-amber-300 text-white">Register</Link>
+            <Link to="/register" className="btn bg-gradient-to-r from-stone-700 to-amber-300 text-white">Register</Link>
           </div>
         ) : (
           <div className="flex items-center gap-2">
@@ -57,11 +57,11 @@ const Navbar = () => {
                   </div>
                 )}
               </button>
-              <ul tabIndex={0} className="menu menu-sm dropdown-content rounded-box shadow-md z-10 mt-3 w-52 p-2 bg-gradient-to-r from-stone-600 to-amber-300 text-white">
+              <ul tabIndex={0} className="menu menu-sm dropdown-content rounded-box shadow-md z-10 mt-3 w-52 p-2 bg-gradient-to-r from-stone-700 to-amber-300 text-white">
                 <li><Link to={`/myartifacts/${user?.uid}`}>My Artifacts</Link></li>
               </ul>
             </div>
-            <button className="btn bg-gradient-to-r from-stone-600 to-amber-300 text-white" onClick={signOutUser} aria-label="Log Out">Log Out</button>
+            <button className="btn bg-gradient-to-r from-stone-700 to-amber-300 text-white" onClick={signOutUser} aria-label="Log Out">Log Out</button>
           </div>
         )}
       </div>

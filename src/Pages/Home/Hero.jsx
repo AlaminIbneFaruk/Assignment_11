@@ -23,7 +23,7 @@ const Hero = () => {
   const backgroundY = useTransform(scrollYProgress, [0, 1], ["0%", "-20%"]);
 
   return (
-    <div className="carousel-container w-full bg-base-100 text-neutral-content ">
+    <div className="carousel-container w-full bg-base-100 text-neutral-content">
       <Carousel showThumbs={true} infiniteLoop autoPlay interval={5000} transitionTime={800} lazyLoad>
         <div className="hero min-h-[60vh]">
           <div className="hero-content flex flex-col-reverse bg-opacity-80 rounded-lg md:flex-row items-center mx-auto px-12 h-full">

@@ -1,12 +1,14 @@
 import Hero from "./Hero.jsx";
+import CategoriesSection from "./CategoriesSection.jsx";
+import SocialMediaShowcase from "./SocialMediaShowcase.jsx";
 import { Helmet } from "react-helmet";
 import { Outlet } from "react-router-dom";
-import CategoriesSection from "./CategoriesSection.jsx";
 import EventSection from "./EventSection.jsx";
-import SocialMediaSection from "./SocialMediaSection.jsx";
 import CaseStudies from "./CaseStudies.jsx";
-import FeaturedDonors from "./FeaturedDonors.jsx";
+import FeaturedContributors from "./FeaturedContributors.jsx";
+
 const Home = () => {
+
   return (
     <>
       <Helmet>
@@ -14,13 +16,13 @@ const Home = () => {
         <title>Home | Artifacts Bazzar</title>
       </Helmet>
       <div className={`min-h-screen`}>
-        <Hero/>
-        <CategoriesSection/>
-        <Outlet></Outlet>
-        <SocialMediaSection/>
-        <EventSection/>
-        <CaseStudies/>
-        <FeaturedDonors/>
+        <Hero />
+        <CategoriesSection />
+        <Outlet />
+        <SocialMediaShowcase />
+        <EventSection />
+        <CaseStudies />
+        <FeaturedContributors />
       </div>
     </>
   );

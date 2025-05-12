@@ -37,7 +37,7 @@ const Contact = () => {
       <div className="max-w-lg mx-auto border-4 border-gray-400 bg-white/50 backdrop-blur-lg rounded-lg p-8 md:p-10 space-y-6 shadow-lg">
         <h2
           className="text-center font-serif font-extrabold text-4xl md:text-4xl 
-  bg-gradient-to-r from-stone-600 to-amber-300 bg-clip-text text-transparent 
+  bg-gradient-to-r from-stone-700 to-amber-300 bg-clip-text text-transparent 
   p-4 uppercase tracking-wider"
         >
           Contact Us

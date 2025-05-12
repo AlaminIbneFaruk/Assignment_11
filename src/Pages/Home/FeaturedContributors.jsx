@@ -31,12 +31,12 @@ const contributors = [
   },
 ];
 
-const FeaturedDonors = () => {
+const FeaturedContributors = () => {
   return (
-    <section className="pb-4bg-base-100">
+    <section className="p-8 bg-base-100">
       <h2
         className="my-16 text-center font-serif font-extrabold text-4xl md:text-4xl 
-        bg-gradient-to-r from-stone-600 to-amber-300 bg-clip-text text-transparent 
+        bg-gradient-to-r from-stone-700 to-amber-300 bg-clip-text text-transparent 
          uppercase tracking-wider"
       >
         Featured Donors
@@ -81,4 +81,4 @@ const FeaturedDonors = () => {
   );
 };
 
-export default FeaturedDonors;
+export default FeaturedContributors;

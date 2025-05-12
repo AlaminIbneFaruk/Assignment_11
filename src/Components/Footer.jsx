@@ -11,7 +11,7 @@ const Footer = () => {
               alt="Ancient Bazaar Logo"
               className="w-auto h-8"
             />
-            <p className="text-5xl font-sans font-extrabold bg-gradient-to-r from-stone-600 to-amber-300 bg-clip-text text-transparent">
+            <p className="text-5xl font-sans font-extrabold bg-gradient-to-r from-stone-700 to-amber-300 bg-clip-text text-transparent">
               ARTIFACT BAZZAR
             </p>
           </Link>

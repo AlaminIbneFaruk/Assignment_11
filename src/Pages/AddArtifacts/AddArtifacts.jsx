@@ -70,7 +70,7 @@ const AddArtifact = () => {
         <article className="hero-content flex-col">
           <div className="card bg-base-100 text-base-content w-full shrink-0 shadow-2xl dark:bg-gray-900 dark:text-white">
             <header className="text-center lg:text-left mx-5 mt-5">
-              <h1 className="font-serif font-extrabold text-3xl md:text-4xl bg-gradient-to-r from-stone-600 to-amber-300 bg-clip-text text-transparent py-4 uppercase tracking-wider">Add Artifact</h1>
+              <h1 className="font-serif font-extrabold text-3xl md:text-4xl bg-gradient-to-r from-stone-700 to-amber-300 bg-clip-text text-transparent py-4 uppercase tracking-wider">Add Artifact</h1>
               <p className="pt-6 text-neutralText text-lg font-bold">Fill in the details below to add a new Artifact.</p>
             </header>
             <form className="card-body" onSubmit={handleSubmit} aria-label="Add Artifact Form">
@@ -87,9 +87,12 @@ const AddArtifact = () => {
                 <select name="artifactType" id="artifactType" value={artifactDetails.artifactType} onChange={handleChange} className="select select-bordered dark:bg-gray-800 dark:text-white" required>
                   <option value="">Select Type</option>
                   <option value="Tools">Tools</option>
-                  <option value="Weapons">Weapons</option>
+                  <option value="Textiles">Textiles</option>
+                  <option value="Artistic-Creations">Artistic-Creations</option>
+                  <option value="Holy-Artifacts">Holy-Artifacts</option>
                   <option value="Documents">Documents</option>
-                  <option value="Writings">Writings</option>
+                  <option value="Ceramics">Ceramics</option>
+                  <option value="Neumismatic">Neumismatic</option>
                 </select>
               </fieldset>
               <button className="btn bg-gradient-to-r from-stone-900 to-amber-500 btn-outline text-white" type="submit">Add Artifact</button>
