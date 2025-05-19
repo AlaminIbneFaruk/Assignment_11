@@ -20,11 +20,11 @@ const EventCard = ({
       </figure>
       <div className="card-body">
         <h3 className="card-title text-2xl font-bold text-neutralText">{title}</h3>
-        <p className="text-gray-500">
+        <p className="">
           {date} | {time}
         </p>
-        <p className="text-gray-600">Location: {location}</p>
-        <p className="text-gray-700 mb-4">{description}</p>
+        <p className="">Location: {location}</p>
+        <p className="mb-4">{description}</p>
         <div className="card-actions justify-end">
           <a
             href={rsvpLink}

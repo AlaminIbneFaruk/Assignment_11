@@ -11,8 +11,9 @@ const CategoriesSection = () => {
     {
       title: "Artistic-Creations",
       category: "Artistic-Creations",
-      description:"Discover artistic creations that reflect the culture and beliefs of their time.",
-      image: "https://i.ibb.co.com/0CNV730/download-1.jpg"
+      description:
+        "Discover artistic creations that reflect the culture and beliefs of their time.",
+      image: "https://i.ibb.co.com/0CNV730/download-1.jpg",
     },
     {
       title: "Holy Artifacts",
@@ -72,13 +73,13 @@ const CategoriesSection = () => {
               shadow-xl rounded-lg overflow-hidden"
           >
             {/* Image Section */}
-            <div className="w-full h-56">
+            <figure className="bg-gray-200 p-2 flex items-center justify-center h-48 w-full overflow-hidden">
               <img
-                src={category.image}
-                alt={category.title}
-                className="w-full h-full object-cover"
+                className="object-cover h-full rounded-md"
+                src={category?.image}
+                alt={category?.title}
               />
-            </div>
+            </figure>
 
             {/* Content Section */}
             <div className="p-4">

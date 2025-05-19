@@ -55,7 +55,7 @@ const Artifacts = () => {
       <div className="flex justify-center mt-4">
         <button
           onClick={handleView}
-          className="btn btn-warning lg:mt-4 bg-gradient-to-r from-stone-900 to-amber-500 text-white font-semibold"
+          className="btn btn-warning lg:mt-4 bg-gradient-to-r from-stone-700 to-amber-300 text-white font-semibold"
         >
           View More
         </button>

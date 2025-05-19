@@ -27,13 +27,13 @@ const contributors = [
       "Provided funding for manuscript restoration",
       "Organized educational programs",
     ],
-    image: "", // No image for this donor
+    image: "https://i.ibb.co/RTNkCgfh/alexbrown.jpg",
   },
 ];
 
 const FeaturedContributors = () => {
   return (
-    <section className="p-8 bg-base-100">
+    <section className="p-8 bg-neutral">
       <h2
         className="my-16 text-center font-serif font-extrabold text-4xl md:text-4xl 
         bg-gradient-to-r from-stone-700 to-amber-300 bg-clip-text text-transparent 
@@ -45,24 +45,23 @@ const FeaturedContributors = () => {
         {contributors.map((donor, index) => (
           <motion.div
             key={index}
-            className="card card-side bg-base-300 shadow-xl p-4 rounded-2xl hover:shadow-2xl transition-transform duration-300"
+            className="card card-side bg-neutral shadow-xl shadow-base-100 p-4 rounded-2xl hover:shadow-2xl transition-transform duration-300"
             whileHover={{ scale: 1.05 }}
           >
-            <div className="w-full md:w-1/2 lg:w-1/3">
-              {/* Show the profile icon if no image is available */}
+            <div className="w-full md:w-1/2 lg:w-1/3 flex items-center justify-center">
               {donor.image ? (
                 <img
                   src={donor.image}
                   alt={donor.name}
-                  className="rounded-lg w-full h-full object-cover mb-4"
+                  className="rounded-full h-24 w-24 object-cover object-top mb-4"
                 />
               ) : (
-                <div className="w-full h-full bg-base-100 rounded-lg flex items-center justify-center mb-4">
+                <div className="w-24 h-24 bg-neutral rounded-full flex items-center justify-center mb-4">
                   <FaUserCircle className="text-6xl text-neutral-content" />
                 </div>
               )}
             </div>
-            <div className="w-full md:w-1/2 lg:w-2/3 pl-4 text-neutral-content">
+            <div className="w-full md:w-1/2 lg:w-2/3 lg:pl-4 text-neutral-content">
               <h3 className="text-xl font-semibold">{donor.name}</h3>
               <p className="text-sm text-neutral-content">{donor.role}</p>
               <p className="mt-2">{donor.bio}</p>

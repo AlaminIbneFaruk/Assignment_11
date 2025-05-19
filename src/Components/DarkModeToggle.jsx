@@ -17,12 +17,12 @@ const DarkModeToggle = () => {
   return (
     <aside aria-label="Theme toggle">
       <button
-        className="btn btn-primary transition duration-300"
+        className="text-3xl btn bg-gradient-to-r from-stone-700 to-amber-300 transition duration-300"
         onClick={toggleTheme}
         aria-pressed={theme === "dark"}
         aria-label={theme === "light" ? "Enable dark mode" : "Enable light mode"}
       >
-        {theme === "light" ? "🌙 Dark Mode" : "🌞 Light Mode"}
+        {theme === "light" ? "🌙" : "🌞"}
       </button>
     </aside>
   );

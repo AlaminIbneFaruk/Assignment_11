@@ -17,6 +17,7 @@ const posts = [
     user: "museum",
     text: "We're hosting a lecture on ancient pottery this Saturday at 2PM! Don't miss the opportunity to learn from our guest expert.",
     hashtag: "#museumlecture #pottery",
+    image: "https://i.ibb.co/spj4vvyc/Ancient-Bowl-Historic.webp",
   },
   {
     id: 3,
@@ -24,6 +25,7 @@ const posts = [
     user: "gera71x",
     text: "Had an amazing time at the museum today!",
     hashtag: "#museum #mammoth",
+    image: "https://i.ibb.co/spj4vvyc/Ancient-Bowl-Historic.webp",
   },
   {
     id: 4,
@@ -48,6 +50,7 @@ const posts = [
     likes: "1,532",
     text: "An exceptional example of Ancient Egyptian sculpture.",
     hashtag: "#artifacts",
+    image: "https://i.ibb.co/spj4vvyc/Ancient-Bowl-Historic.webp",
   },
   {
     id: 7,
@@ -72,18 +75,18 @@ const posts = [
 
 const SocialMediaCard = ({ post }) => {
   return (
-    <div className="card w-full bg-base-300 shadow-lg rounded-lg mb-4 break-inside-avoid">
+    <div className="card bg-base-300 shadow-lg rounded-xl overflow-hidden">
       <div className="card-body p-4">
         <div className="flex items-center gap-2 mb-2">
           <div className="text-xl font-bold text-base-content">{post.user}</div>
           <span className="badge badge-outline">{post.platform}</span>
         </div>
         {post.image && (
-          <figure className="rounded-xl overflow-hidden mb-3">
+          <figure className="h-48 bg-gray-300 rounded-xl overflow-hidden mb-3">
             <img
               src={post.image}
               alt="post"
-              className="w-full h-auto object-cover"
+              className=" h-full object-cover"
             />
           </figure>
         )}
@@ -99,6 +102,7 @@ const SocialMediaCard = ({ post }) => {
   );
 };
 
+
 SocialMediaCard.propTypes = {
   post: PropTypes.shape({
     id: PropTypes.number.isRequired,
@@ -113,7 +117,7 @@ SocialMediaCard.propTypes = {
 
 const SocialMediaShowcase = () => {
   return (
-    <div className="px-6 bg-base-100 text-base-content">
+    <div className="px-6 bg-base-100 text-neutral-content">
       <h1
         className="my-12 py-12 text-center font-serif font-extrabold text-3xl md:text-4xl mb-8 
         bg-gradient-to-r from-stone-700 to-amber-300 bg-clip-text text-transparent 
@@ -121,7 +125,7 @@ const SocialMediaShowcase = () => {
       >
         Social Media Showcase
       </h1>
-      <div className="columns-1 sm:columns-2 md:columns-3 lg:columns-4 gap-4 space-y-4">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
         {posts.map((post) => (
           <SocialMediaCard key={post.id} post={post} />
         ))}
@@ -129,5 +133,4 @@ const SocialMediaShowcase = () => {
     </div>
   );
 };
-
 export default SocialMediaShowcase;

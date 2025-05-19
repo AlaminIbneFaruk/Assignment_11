@@ -17,10 +17,13 @@ const Artifact = ({ artifact }) => {
   };
 
   return (
-    <article className="rounded-2xl shadow-lg overflow-hidden bg-base-100 border border-base-300 flex flex-col transition-colors" aria-label={artifact?.artifactName}>
-      <figure>
+    <article
+      className="rounded-2xl shadow-lg overflow-hidden bg-base-100 border border-base-300 flex flex-col transition-colors max-h-screen"
+      aria-label={artifact?.artifactName}
+    >
+      <figure className="bg-gray-200 p-2 flex items-center justify-center h-48 w-full overflow-hidden">
         <img
-          className="w-full h-48 object-cover border-b-2 border-base-300"
+          className="object-cover h-full object-left rounded-md"
           src={artifact?.artifactImage}
           alt={artifact?.artifactName}
         />

@@ -11,7 +11,7 @@ const Navbar = () => {
   const handleMouseLeave = () => setIsHovered(false);
 
   return (
-    <header className="navbar sticky top-0 z-50 bg-base-100 shadow-md" role="banner">
+    <header className="navbar sticky top-0 z-50 bg-base-100 shadow-md lg:px-8" role="banner">
       <nav className="navbar-start" aria-label="Main navigation">
         <div className="dropdown">
           <button tabIndex={0} className="btn btn-ghost lg:hidden" aria-label="Open menu">
